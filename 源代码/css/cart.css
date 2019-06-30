@@ -1,0 +1,154 @@
+.pyg_view {
+  padding: 10px 20px;
+}
+
+.pyg_view .pyg_addr .addr_title {
+  color: #666;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.pyg_view .pyg_addr .addr_content {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: static;
+  padding: 10px;
+}
+
+.pyg_view .pyg_addr .addr_content .fa-location-arrow {
+  padding: 0 20px;
+}
+
+.pyg_view .pyg_addr .addr_content .default_addr div {
+  color: #666;
+  font-size: 12px;
+}
+
+.pyg_view .pyg_addr .addr_content .fa-arrow-right {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #666;
+}
+
+.pyg_view .pyg_total_row .total_title {
+  color: #666;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.pyg_view .pyg_total_row .total_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+}
+
+.pyg_view .pyg_order .order_title {
+  color: #666;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+.pyg_view .pyg_order .order_content ul {
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pyg_view .pyg_order .order_content ul li {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_chk {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_chk > div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_chk > div input {
+  position: static;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_img {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_img img {
+  width: 80%;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_info {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  overflow: hidden;
+}
+
+.pyg_view .pyg_order .order_content ul li .item_info .goods_name {
+  font-size: 14px;
+  color: #666;
+}
+
+body {
+  display: none;
+}
+
+#delete_btn {
+  display: none;
+}
+
+.item_chk {
+  display: none;
+}
+
+.item_numberbox {
+  display: none;
+}
+
+.editting #delete_btn {
+  display: block;
+}
+
+.editting .item_chk {
+  display: block;
+}
+
+.editting .item_numberbox {
+  display: block;
+}

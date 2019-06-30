@@ -1,0 +1,96 @@
+@mixin  ellpisis($num:1) {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+}
+
+
+body{
+  padding-top: 90px;
+}
+
+.loadding{
+ &::before{
+  //  display: none;
+ }
+ &::after{
+  //  display: none;
+ }
+}  
+.search_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: orange;
+}
+
+.sort_bar {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: yellow;
+}
+.pyg_view{
+  overflow: hidden;
+  position: relative;
+}
+
+
+.pyg_list{
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
+  li{
+    background-color: #fff;
+    margin-top: 5px;
+    padding: 5px 0;
+    a{
+      display: flex;
+      position: relative;
+      .fa{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        color: #ccc;
+      }
+      .item_img{
+        flex: 1;
+        img{
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+      .item_info{
+        flex: 2;
+        overflow: hidden;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .goods_name{
+          color: #666;
+          // 不要 换行
+          white-space: nowrap;
+          // 超出隐藏
+          overflow: hidden;
+          // 文本 ...
+          text-overflow: ellipsis;
+          // @include ellpisis(3);
+
+        }
+        .goods_price{
+          color: red;
+        }
+      }
+    }
+  }
+}

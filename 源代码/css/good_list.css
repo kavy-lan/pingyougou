@@ -1,0 +1,93 @@
+body {
+  padding-top: 90px;
+}
+
+.search_bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: orange;
+}
+
+.sort_bar {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: yellow;
+}
+
+.pyg_view {
+  overflow: hidden;
+  position: relative;
+}
+
+.pyg_list {
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
+}
+
+.pyg_list li {
+  background-color: #fff;
+  margin-top: 5px;
+  padding: 5px 0;
+}
+
+.pyg_list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.pyg_list li a .fa {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #ccc;
+}
+
+.pyg_list li a .item_img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.pyg_list li a .item_img img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.pyg_list li a .item_info {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  overflow: hidden;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pyg_list li a .item_info .goods_name {
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pyg_list li a .item_info .goods_price {
+  color: red;
+}

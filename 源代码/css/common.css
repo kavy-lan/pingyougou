@@ -1,0 +1,90 @@
+@charset "UTF-8";
+img {
+  display: block;
+  width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.loadding::before {
+  content: "";
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: .9;
+}
+
+.loadding::after {
+  content: "\f110";
+  position: fixed;
+  z-index: 101;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 100px;
+  top: 30%;
+  left: 50%;
+  margin-left: -50px;
+  color: #0094ff;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-animation: fa-spin 2s infinite linear;
+          animation: fa-spin 2s infinite linear;
+}
+
+body {
+  padding: 45px 0 53px;
+}
+
+/* 头部 */
+.pyg_search {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  padding: 5px;
+}
+
+/* 尾部 */
+.pyg_link {
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_link a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  color: #000;
+  padding-top: 5px;
+}
+
+.pyg_link a span {
+  font-size: 22px;
+}
+
+.pyg_link a p {
+  color: inherit;
+}
+
+/* 内容 */
+.pyg_view {
+  height: 100%;
+  overflow: scroll;
+}

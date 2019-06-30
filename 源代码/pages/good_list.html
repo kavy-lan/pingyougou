@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>商品列表</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/good_list.css">
+</head>
+
+
+<body>
+  <!-- 搜索 -->
+  <div class="search_bar"></div>
+  <!-- 排序 -->
+  <div class="sort_bar"></div>
+
+  <!-- 内容 -->
+  <div class="pyg_view">
+    <div>
+      <ul class="pyg_list" ></ul>
+    </div>
+  </div>
+  <!-- 尾部 -->
+  <footer class="pyg_link">
+    <a href="../index.html">
+      <span class="fa fa-home"></span>
+      <p>首页</p>
+    </a>
+    <a href="category.html">
+      <span class="fa fa-list-ul"></span>
+      <p>分类</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-shopping-cart"></span>
+      <p>购物车</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-user"></span>
+      <p>我的</p>
+    </a>
+  </footer>
+</body>
+
+<!-- 模板 -->
+<script id="mainTpl" type="text/html">
+  {{each arr value index}}
+  <li>
+    <!-- 
+      在mui 中 上拉或者下拉刷新组件中 a标签的默认跳转行为被mui阻止了
+      1 原因
+          mui 后期是可以通过一些工具打包成 app 
+      2 解决
+        1 找mui的源码 修改 一下 !!! 不推荐!!!
+        2 使用js的方式来跳转 很方便就实现了
+          $("body").on("tap","a",function(){
+            var href=this.href;
+            location.href=href;
+          });
+      
+     -->
+    <a href="good_detail.html?goods_id={{value.goods_id}}">
+     <div class="item_img">
+       <img src="{{value.goods_small_logo||'../static/images/60x60.gif'}}" alt="">
+     </div>
+     <div class="item_info">
+       <!-- <div class="goods_name mui-ellipsis-2"> -->
+       <div class="goods_name ">
+         {{value.goods_name}}
+       </div>
+       <div class="goods_price">￥{{value.goods_price}}</div>
+     </div>
+
+     <span class="fa fa-arrow-right"></span>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<!-- 模板 -->
+
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+
+<script src="../js/common.js"></script>
+<script src="../js/good_list.js"></script>
+
+</html>

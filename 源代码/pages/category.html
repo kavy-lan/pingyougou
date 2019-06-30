@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>分类</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/category.css">
+</head>
+
+<!-- <body class="loadding"> -->
+<body >
+  <!-- 头部 -->
+  <header class="pyg_search">
+    <div class="mui-input-row mui-search">
+      <input type="search" class="mui-input-clear" placeholder="">
+    </div>
+  </header>
+  <!-- 内容 -->
+  <div class="pyg_view">
+    <!-- <span class="fa fa-spinner fa-spin"></span> -->
+    <!-- 左侧菜单 -->
+    <div class="left_box">
+        <ul class="pyg_menu"></ul>
+    </div>
+    <div class="right_box">
+     
+   
+    </div>
+  </div>
+  <!-- 尾部 -->
+  <footer class="pyg_link">
+    <a href="../index.html">
+      <span class="fa fa-home"></span>
+      <p>首页</p>
+    </a>
+    <a href="./pages/category.html">
+      <span class="fa fa-list-ul"></span>
+      <p>分类</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-shopping-cart"></span>
+      <p>购物车</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-user"></span>
+      <p>我的</p>
+    </a>
+  </footer>
+</body>
+
+<!-- 模板 -->
+<!-- 左侧菜单 -->
+<script id="leftTpl" type="text/html" >
+  {{each arr value index}}
+  {{if index==0}}
+  <li class="active" >{{value.cat_name}}</li>
+  {{/if}}
+  {{if index!=0}}
+  <li  >{{value.cat_name}}</li>
+  {{/if}}
+  {{/each}}
+ </script>
+
+ <!-- 右侧内容 -->
+ <script id="rightTpl" type="text/html" >
+  <div>
+  {{each arr value1 index1}}
+  <div class="goods_group">
+      <div class="goods_title">
+       {{value1.cat_name}}
+      </div>
+      <ul class="goods_content">
+        {{each value1.children value2 index2}}
+        <li>
+          <a href="good_list.html?cid={{value2.cat_id}}">
+            <img src="{{value2.cat_icon}}" alt="">
+            <p>{{value2.cat_name}}</p>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/each}}
+</div>
+</script>
+
+
+<!-- 模板 -->
+
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<!-- 只容器元素的第一个子元素可以滚动 其他忽略 -->
+<script src="../js/common.js"></script>
+<script src="../js/category.js"></script>
+
+</html>

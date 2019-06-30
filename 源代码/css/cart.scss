@@ -1,0 +1,125 @@
+ .pyg_view {
+   padding: 10px 20px;
+   .pyg_addr {
+     .addr_title {
+       color: #666;
+       font-size: 12px;
+       padding: 10px 0;
+     }
+     .addr_content {
+       background-color: #fff;
+       display: flex;
+       position: static;
+       padding: 10px;
+       .fa-location-arrow {
+         padding: 0 20px;
+       }
+       .default_addr {
+         span {}
+         div {
+           color: #666;
+           font-size: 12px;
+         }
+       }
+       .fa-arrow-right {
+         position: absolute;
+         top: 20px;
+         right: 30px;
+         color: #666;
+       }
+     }
+   }
+   .pyg_total_row {
+     .total_title {
+       color: #666;
+       font-size: 12px;
+       padding: 10px 0;
+     }
+     .total_content {
+       display: flex;
+       padding: 10px;
+       justify-content: space-between;
+       background-color: #fff;
+     }
+   }
+   .pyg_order {
+     .order_title {
+       color: #666;
+       font-size: 12px;
+       padding: 10px 0;
+     }
+     .order_content {
+       ul {
+         padding: 10px 0;
+         margin: 0;
+         list-style: none;
+         li {
+           background-color: #fff;
+           display: flex;
+           padding: 10px 0;
+           margin-top: 10px;
+           .item_chk {
+             flex: 1;
+             >div {
+               height: 100%;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               input {
+                 position: static;
+               }
+             }
+           }
+           .item_img {
+             flex: 2;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             img {
+               width: 80%;
+             }
+           }
+           .item_info {
+             flex: 6;
+             overflow: hidden;
+             .goods_name {
+               font-size: 14px;
+               color: #666;
+             }
+             .item_num {
+               //  display: flex;
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+
+ body {
+   display: none;
+ }
+
+ #delete_btn {
+   display: none;
+ }
+
+ .item_chk {
+   display: none;
+ }
+
+ .item_numberbox {
+   display: none;
+ }
+
+ .editting {
+   #delete_btn {
+     display: block;
+   }
+   .item_chk {
+     display: block;
+   }
+   .item_numberbox {
+     display: block;
+   }
+ }

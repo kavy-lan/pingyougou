@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.pyg_view {
+  padding: 10px;
+}
+
+.vcode-row {
+  position: relative;
+}
+
+.vcode-row #vcode_btn {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  /* 由内容撑开 */
+  width: auto;
+}
+
+.pyg_btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.pyg_btns button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  font-size: 14px;
+}

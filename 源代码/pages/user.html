@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>用户信息</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/user.css">
+</head>
+
+
+<body>
+  <!-- 头部导航 -->
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">用户信息</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header>
+
+  <!-- 内容 -->
+
+  <div class="pyg_view">
+    <!-- 个人信息 -->
+    <div class="user_row">
+      <div class="user_icon">
+        <span class="fa fa-user-o"></span>
+      </div>
+      <div class="user_contact">
+        <div class="phone">15111111111</div>
+        <div class="email">yeah126139163@16.com</div>
+      </div>
+    </div>
+    <!-- 订单管理 -->
+    <div class="order_row">
+      <div class="order_title">订单管理</div>
+      <div class="order_list">
+        <a href="order.html?type=2">
+          <span class="fa fa-address-card"></span>
+          <div>待付款</div>
+        </a>
+        <a href="order.html?type=3">
+          <span class="fa fa-address-card"></span>
+          <div>待收货</div>
+        </a>
+        <a href="order.html?type=1">
+          <span class="fa fa-address-card"></span>
+          <div>退款/售后</div>
+        </a>
+        <a href="order.html?type=1">
+          <span class="fa fa-address-card"></span>
+          <div>全部订单</div>
+        </a>
+      </div>
+    </div>
+
+    <button id="logout_btn"  type="button" class="mui-btn mui-btn-danger">退出登录</button>
+  </div>
+  <!-- 尾部 -->
+  <footer class="pyg_link">
+    <a href="../index.html">
+      <span class="fa fa-home"></span>
+      <p>首页</p>
+    </a>
+    <a href="category.html">
+      <span class="fa fa-list-ul"></span>
+      <p>分类</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-shopping-cart"></span>
+      <p>购物车</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-user"></span>
+      <p>我的</p>
+    </a>
+  </footer>
+
+</body>
+
+<!-- 模板 -->
+
+<!-- 模板 -->
+
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+
+<script src="../js/common.js"></script>
+<script src="../js/user.js"></script>
+
+</html>

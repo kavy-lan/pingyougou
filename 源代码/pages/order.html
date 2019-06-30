@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>订单</title>
+  <link rel="stylesheet" href="../lib/mui/css/mui.css">
+  <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/order.css">
+</head>
+
+
+<body>
+  <!-- 头部导航 -->
+  <header id="header" class="mui-bar mui-bar-nav">
+    <h1 class="mui-title">订单</h1>
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+  </header>
+
+  <!-- 内容 -->
+
+  <div class="pyg_view">
+    <!-- 标题 -->
+    <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+      <a class="mui-control-item mui-active" href="#item1">全部</a>
+      <a class="mui-control-item" href="#item2">待付款</a>
+      <a class="mui-control-item" href="#item3">待发货</a>
+    </div>
+    <!-- 内容 -->
+    <div>
+      <div id="item1" class="mui-control-content mui-active">
+        <ul class="item_list"></ul>
+      </div>
+      <div id="item2" class="mui-control-content">正在开发中.....</div>
+      <div id="item3" class="mui-control-content">正在开发中.....</div>
+    </div>
+
+  </div>
+  <!-- 尾部 -->
+  <footer class="pyg_link">
+    <a href="../index.html">
+      <span class="fa fa-home"></span>
+      <p>首页</p>
+    </a>
+    <a href="category.html">
+      <span class="fa fa-list-ul"></span>
+      <p>分类</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-shopping-cart"></span>
+      <p>购物车</p>
+    </a>
+    <a href="javascript:;">
+      <span class="fa fa-user"></span>
+      <p>我的</p>
+    </a>
+  </footer>
+
+</body>
+
+<!-- 模板 -->
+<script id="mainTpl" type="text/html" >
+  {{each arr value index}}
+  <li>
+    <div class="item_left">
+      <div class="item_order">
+        订单编号
+      </div>
+      <div class="item_num mui-ellipsis">{{value.order_number}}</div>
+    </div>
+    <div class="item_right">￥{{value.order_price}}</div>
+  </li>
+
+  {{/each}}
+ </script>
+<!-- 模板 -->
+
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+
+<script src="../js/common.js"></script>
+<script src="../js/order.js"></script>
+
+</html>

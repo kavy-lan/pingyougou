@@ -1,0 +1,64 @@
+.pyg_view {
+  padding: 20px 10px;
+}
+
+.user_row {
+  background-color: #fff;
+  box-shadow: 0 0 5px 5px #ccc;
+  display: flex;
+  padding:  10px 0;
+  .user_icon {
+    flex: 1;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .user_contact {
+    flex: 4;
+    .email{
+      font-size: 12px;
+      color: #666;
+    }
+  }
+}
+
+.order_row{
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 5px #ccc;
+  padding:  10px 0;
+  .order_title{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .order_list{
+    display: flex;
+    padding-top: 5px;
+    a{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      span{
+        font-size: 25px;
+      }
+      div{
+        font-size: 13px;
+      }
+    }
+  }
+
+}
+
+#logout_btn{
+  display: block;
+  width: 100%;
+  padding: 10px ;
+  margin-top: 30px;
+}
+
+body{
+  display: none;
+}

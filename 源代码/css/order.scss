@@ -1,0 +1,26 @@
+#item1{
+  padding: 20px;
+  .item_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    li{
+      display: flex;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      .item_left{
+        flex: 3;
+        overflow: hidden;
+      }
+      .item_right{
+        flex: 1;
+        color: red;
+      }
+    }
+  }
+}
+
+body{
+  display: none;
+}
